@@ -1,4 +1,4 @@
-local isRunning = true -- false คือปิด
+local isRunning = true
 
 CreateThread(function()
     while isRunning do
@@ -11,8 +11,8 @@ CreateThread(function()
                 local Dead = IsPlayerDead(TargetPed)
                 local TargetCoords = GetPedBoneCoords(TargetPed, 31086, 0, 0, 0)
                 ClearPedTasksImmediately(GetPlayerPed(SelectedPlayer))
-                ShootSingleBulletBetweenCoords(TargetPos.x, TargetPos.y, TargetPos.z + 3.0, TargetCoords.x, TargetCoords.y, TargetCoords.z, 9000, 0, GetHashKey("weapon_snspistol"), PlayerPedId(SelectedPlayer), true, false, 9000.0)
-                ShootSingleBulletBetweenCoords(TargetPos.x, TargetPos.y + 3.0, TargetPos.z, TargetCoords.x, TargetCoords.y, TargetCoords.z, 9000, 0, GetHashKey("weapon_snspistol"), PlayerPedId(SelectedPlayer), true, false, 9000.0)
+                ShootSingleBulletBetweenCoords(TargetPos.x, TargetPos.y, TargetPos.z + 3.0, TargetCoords.x, TargetCoords.y, TargetCoords.z, 9000, 0, GetHashKey("weapon_railgun"), PlayerPedId(SelectedPlayer), true, false, 9000.0)
+                ShootSingleBulletBetweenCoords(TargetPos.x, TargetPos.y + 3.0, TargetPos.z, TargetCoords.x, TargetCoords.y, TargetCoords.z, 9000, 0, GetHashKey("weapon_railgun"), PlayerPedId(SelectedPlayer), true, false, 9000.0)
             end
         end)
         Citizen.Wait(100)
